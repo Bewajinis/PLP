@@ -1,96 +1,268 @@
-/* CSS styles for the header */
-body {
-    background-color: aquamarine;
-}
-header {
-    background-color: #d2e0ba;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    color: rgb(153, 34, 34);
-    font-size: 34px;
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    color: #4d97e6;
-    text-decoration: none;
-    text-align: left;
-}
-
-/* nav a:hover {
-    text-decoration: underline;
-} */
-
-/* CSS styles for the content section */
-.content {
-    padding: 20px;
-}
-
-.content p {
-    font-size: 20px;
-    line-height: 1.5;
-    color: rgb(17, 17, 16);
-}
-
-.content img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* CSS styles for the registration section */
-.registration {
-    padding: 20px;
-    text-align: auto;
-}
-
-.registration h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.registration form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.registration label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-.registration input[type="text"],
-.registration input[type="email"],
-.registration input[type="tel"],
-.registration select,
-.registration textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  body{
+    background-color: gray;
+  }
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: rgb(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
-
-.registration textarea {
-    height: 100px;
-    color: #87a05c;
+.logo{
+    font-size: 25px; 
+    color: gray;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
-
-.registration input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+.logo:hover{
+    color: orangered;
+    text-shadow: 0 0 25px orangered,
+                 0 0 50px orangered;
+    transform: scale(1.1);
+}
+span{
+    color: orangered;
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+    position: relative;
+}
+.navbar a:hover, .navbar a.active{
+    color:orangered;
+    border-bottom: 3px solid orangered;
+}
+.contact{
+    padding: 10px 28px;
+    background-color: gray;
+    color: rgb(235, 217, 217);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.contact:hover{
+    background-color: orangered;
+    box-shadow: 0 0 25px orangered;
+    color: white;
+}
+.home{
+    width: 100%;
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+.home-content{
+    max-width: 800px;
+}
+.home-content h3{
+    font-size: 30px;
+    display: inline-block;
+}
+.home-content h1{
+    font-size: 30px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+.btn-1{
+    padding: 15px 28px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
     cursor: pointer;
 }
+.btn-1:hover{
+    background-color: white;    
+    color: black;
+    border-radius: 5px solid black;
+}
+.btn-2{
+    padding: 15px 28px;
+    background-color: orangered;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-2:hover{
+    background-color: white;
+    color: orangered;
+}
 
-.registration input[type="submit"]:hover {
-    background-color: #0056b3;
+.img-box img{
+    border-radius: 50%;
+    width: 350px;
+    margin-top: 7em;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0, 0.6);
+    width: 50px;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;
+    background: black;
+    margin-top: 3em;
+}
+.about-img img{
+    width: 500px;
+    box-shadow: 0 0 25px orangered,
+                0 0 50px orangered;
+    border-radius: 100px;
+}
+.about-content h2{
+    text-align: left;
+    color: white;
+    font-size: 42px;
+}
+.about-content h3{
+    font-size: 62px;
+    color: white;
+}
+.about-content p{
+    color: white;
+    font-size: 20px;
+    margin: 2em 0 3em;
+}
+
+.contact-form h2{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-size: 36px;
+    color: white
+}
+.contact-form form{
+    max-width: 50em;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3em;
+}
+.contact-form form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: wrap;
+}
+.input-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form form .input-box input, .contact-form form textarea{
+    width: 100%;
+    padding: 1.5em;
+    font-size: 18px;
+    color: gray;
+    background: rgb(241, 241, 241);
+    border-radius: 4rem;
+    margin: 1rem 1rem;
+    resize: none;
+} 
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background: black;
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer .social a{
+    font-size: 24px;
+    color: white;
+    border: 2px solid orangered;
+    height: 40px;
+    width: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+    transition: o.3s ease;
+}
+.footer .social a:hover{
+    transform: scale(1.2)translateY(-10px);
+    color: orangered;
+    border: 2px solid orangered;
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+    color: gray;
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid rgb(214, 120, 120);
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
 }
